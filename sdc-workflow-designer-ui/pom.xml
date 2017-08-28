@@ -53,7 +53,7 @@
                         <configuration>
                             <!-- See https://nodejs.org/en/download/ for
                                 latest node and npm (lts) versions -->
-                            <nodeVersion>latest</nodeVersion>
+                            <nodeVersion>v6.11.2</nodeVersion>
                             <npmVersion>3.10.10</npmVersion>
                         </configuration>
                     </execution>
