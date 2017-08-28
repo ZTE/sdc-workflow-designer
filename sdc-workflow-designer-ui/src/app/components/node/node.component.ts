@@ -22,11 +22,19 @@ import { JsPlumbService } from '../../services/jsplumb.service';
     styleUrls: ['./node.component.css'],
     templateUrl: 'node.component.html',
 })
-export class NodeComponent {
+export class NodeComponent implements AfterViewInit {
+
     @Input() public node: Node;
+    @Input() public last: boolean;
 
     constructor(private jsPlumbService: JsPlumbService) {
 
+    }
+
+    ngAfterViewInit(): void {
+        if(this.last) {
+            this.jsPlumbService.initNode('.node');
+        }
     }
 
 }
